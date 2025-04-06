@@ -80,9 +80,10 @@ def test_scenario_2():
     partners_list = main_page.find_list_by_XPATH("//div[@class='controls-ListView__itemV-relative controls-ListView__itemV controls-ListView__item_default controls-ListView__item_contentWrapper js-controls-ListView__editingTarget  controls-ListView__itemV_cursor-pointer  controls-ListView__item_showActions js-controls-ListView__measurableContainer controls-ListView__item__unmarked_default controls-ListView__item_highlightOnHover controls-hover-background-default controls-Tree__item']")
     assert len(partners_list)>0, "Нет списка партнёров"
     main_page.click_on_element(region_text)
+    time.sleep(0.5)
     button = main_page.find_first_by_XPATH("//span[@title='Камчатский край']")
     main_page.click_on_element(button)
-    time.sleep(1.5)
+    time.sleep(2)
     region_text = main_page.find_first_by_XPATH("//span[@class='sbis_ru-Region-Chooser__text sbis_ru-link']")
     assert region_text.text == "Камчатский край", "Неправильно выбран регион"
     assert partners_list != main_page.find_list_by_XPATH("//div[@class='controls-ListView__itemV-relative controls-ListView__itemV controls-ListView__item_default controls-ListView__item_contentWrapper js-controls-ListView__editingTarget  controls-ListView__itemV_cursor-pointer  controls-ListView__item_showActions js-controls-ListView__measurableContainer controls-ListView__item__unmarked_default controls-ListView__item_highlightOnHover controls-hover-background-default controls-Tree__item']"), "Не изменился список партнёров"
