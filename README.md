@@ -16,7 +16,7 @@ pytest .\Test_task_3_scenarios.py::test_scenario_3 <br>
 pytest .\Test_task_3_scenarios.py <br>
 Во время 3го сценария, файл сохраняется в папку со скриптом, после чего автоматически удаляется
 <br>
-Test_task_site_loading_speed.py - для задания фронтент-производительность <br>
+Test_task_site_loading_speed.py - для задания фронтенд-производительность <br>
 Использована библиотека: <br>
 -Selenium <br>
 Инструкция для запуска: <br>
